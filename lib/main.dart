@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   runApp(const MyApp());
@@ -49,6 +50,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  String texto = 'Nueva linea';
 
   void _incrementCounter() {
     setState(() {
@@ -59,6 +61,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
     });
+  }
+
+  Color changeText() {
+    return Colors.primaries[Random().nextInt(Colors.primaries.length)];
   }
 
   @override
@@ -98,6 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               'Hola mundo Flutter con Dart:',
             ),
+            Text(texto, style: TextStyle(color: changeText())),
             Text(
               '$_counter',
               style: Theme.of(context)
