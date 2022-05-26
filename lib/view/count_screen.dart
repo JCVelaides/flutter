@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ContadorFul( extends StatefulWidget {
+class ContadorFul extends StatefulWidget {
   const ContadorFul({Key? key}) : super(key: key);
 
   @override
